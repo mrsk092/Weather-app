@@ -1,12 +1,14 @@
-import { useState } from 'react'
+
 import Button from '@mui/material/Button';
+import SearchBox from './SearchBox';
 
 
 function App() {
 
+
   return (
     <>
-      <Button variant='contained'>click me</Button>
+      <SearchBox></SearchBox>
     </>
   )
 }
