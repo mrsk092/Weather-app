@@ -3,22 +3,29 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import './SearchBox.css';
 
-const baseUrl = import.meta.env.VITE_BASE_URL;
-const apiKey = import.meta.env.VITE_API_KEY;
+const BASE_URL = import.meta.env.VITE_BASE_URL;
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 export default function SearchBox(){
 
-
-   
-
+  
     let [city,setCity] = useState("");
 
-    let handleInput = (evt) =>{
+    const getData = async ()=>{
+        const respons = await fetch(`${BASE_URL}?q=${city}&appid=${API_KEY}&units=metric`);
+        const jsonResons = await respons.json();
+        console.log(jsonResons);
+    }
+
+    
+
+    const handleInput = (evt) =>{
         setCity(evt.target.value);
     }
 
-    let handleSubmit = (evt) =>{
+    const handleSubmit = (evt) =>{
         evt.preventDefault();
+        getData();
         setCity("");
     }
     
