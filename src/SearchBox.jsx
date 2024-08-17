@@ -7,17 +7,28 @@ import './SearchBox.css';
 export default function SearchBox(){
 
     let [city,setCity] = useState("");
-    
+
     let handleInput = (evt) =>{
         setCity(evt.target.value);
     }
+
+    let handleSubmit = (evt) =>{
+        evt.preventDefault();
+        setCity("");
+    }
     
     return (
+
     <div className='container'>
+
         <h1>Search for the weather</h1>
-           <form >
+        
+           <form onSubmit={handleSubmit} >
+
            <TextField id="outlined-basic" label="City Name" variant="outlined" required onChange={handleInput} value={city}/>
+
            <br></br><br></br>
+
            <Button variant="contained" type='submit'>Search</Button>
 
            </form>
