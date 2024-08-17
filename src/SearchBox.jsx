@@ -3,8 +3,13 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import './SearchBox.css';
 
+const baseUrl = import.meta.env.VITE_BASE_URL;
+const apiKey = import.meta.env.VITE_API_KEY;
 
 export default function SearchBox(){
+
+
+   
 
     let [city,setCity] = useState("");
 
