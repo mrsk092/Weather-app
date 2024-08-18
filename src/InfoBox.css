@@ -1,0 +1,11 @@
+.infoBox{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 40px;
+}
+#cityContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

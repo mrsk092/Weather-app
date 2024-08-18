@@ -6,6 +6,7 @@ import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import InfoBox from './InfoBox';
 import SearchBox from './SearchBox';
+import WeatherApp from './WeatherApp';
 
 const App = () => {
 
@@ -46,7 +47,7 @@ const App = () => {
         : {
             background: {
               default: '#121212',
-              paper: '#424242',
+              paper: '#1E1E1E',
             },
             text: {
               primary: '#ffffff',
@@ -68,8 +69,7 @@ const App = () => {
           {mode === 'light' ? <Brightness4Icon /> : <Brightness7Icon />}
         </IconButton>
       </div>
-      <SearchBox />
-      <InfoBox />
+      <WeatherApp></WeatherApp>
     </ThemeProvider>
   );
 };
